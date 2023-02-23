@@ -1,0 +1,26 @@
+@import 'mixin/_breakpoint.scss';
+
+$breakpoint_small_down: 575px;
+$breakpoint_small_up: 576px;
+$breakpoint_medium_down: 799px;
+$breakpoint_medium_up: 800px;
+$breakpoint_large_down: 1199px;
+$breakpoint_large_up: 1200px;
+
+.header {
+  &>a {
+    color: goldenrod;
+
+    @include small_down {
+      color: green;
+    }
+
+    @include small_up {
+      color: red;
+    }
+
+    @include medium_up {
+      color: blue;
+    }
+  }
+}
